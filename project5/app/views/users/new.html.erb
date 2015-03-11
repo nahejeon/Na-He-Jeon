@@ -1,0 +1,31 @@
+<%= form_tag("create", :method => "post") do %>
+	<table>
+		<tr>
+			<td><%= label_tag(:firstname, "First name: ") %></td>
+			<td><%= text_field_tag(:firstname) %></td>
+		</tr>
+		<tr>
+			<td><%= label_tag(:lastname, "Last name: ") %></td>
+			<td><%= text_field_tag(:lastname) %></td>
+		</tr>
+		<tr>
+			<td><%= label_tag(:user_id, "Enter username: ") %></td>
+			<td><%= text_field_tag(:user_id) %></td>
+		</tr>
+		<tr>
+			<td><%= label_tag(:password, "Enter password: ") %></td>
+			<td><%= text_field_tag(:password) %></td>
+		</tr>
+		<tr>
+			<td><%= label_tag(:password_confirmation, "Re-enter password: ") %></td>
+			<td><%= text_field_tag(:password_confirmation) %></td>
+		</tr>
+	</table>
+	<%= submit_tag("Register") %>
+<% end %>
+<% if flash[:passwordunconfirmed] %>
+	<p><%= flash[:passwordunconfirmed] %></p>
+<% end %>
+<% if flash[:idexists] %>
+	<p><%= flash[:idexists] %></p>
+<% end %>

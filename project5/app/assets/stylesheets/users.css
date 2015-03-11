@@ -1,0 +1,27 @@
+p{
+	font-family: Tahoma;
+	color: black;
+}
+
+.title{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.names{
+	font-weight: bold;
+}
+
+a:link{
+	color: black;
+	text-decoration: none;
+}
+
+a:visited{
+	color: #E62E00;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #FF9933;
+}

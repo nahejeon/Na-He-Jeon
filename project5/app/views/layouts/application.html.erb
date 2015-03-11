@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <%= stylesheet_link_tag "application" %>
+  <%= image_tag "header.png" %>
+</head>
+<body>
+	<table>
+		<tr>
+			<% if session[:current_user_id] == nil %>
+				<td><a href="/users/login">Login</a></td>
+			<% else %>
+				<td>Hi <%= User.find_by_id(session[:current_user_id]).first_name %>!</td>
+				<td><a href="/users/logout">Logout</a></td>
+			<% end %>
+		</tr>
+	</table>
+<%= yield %>
+
+</body>
+</html>

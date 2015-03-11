@@ -1,0 +1,14 @@
+	<p class = "nametitle">Photos of <%=@person.first_name + " " + @person.last_name%></p>
+	<% for photo in @photos%>
+		<p><%= image_tag(photo.file_name) %></p>
+		<p class = "creation">Created at <%= photo.date_time %></p>
+		<p><%= link_to("New Comment", controller: "comments", action: "new", id: photo.id) %></p>
+		<% for comment in photo.comments %>
+			<p class = "block">
+				<div class = "commenter"><%= User.find(comment.user_id).first_name + " " + User.find(comment.user_id).last_name %></div>
+				<div class = "comment"><%= comment.comment %></div>
+				<div class = "date"><%= comment.date_time %></div>
+			</p>
+		<% end %>
+	<% end %>
+<p><%= link_to("New Photo", controller: "photos", action: "new") %></p>

@@ -1,0 +1,21 @@
+<%= form_tag("post_login", :method => "post") do %>
+	<table>
+		<tr>
+			<td><%= label_tag(:username, "ID: ") %></td>
+			<td><%= text_field_tag(:username) %></td>
+		</tr>
+		<tr>
+			<td><%= label_tag(:secret, "Password: ") %></td>
+			<td><%= password_field_tag(:secret) %></td>
+		</tr>
+	</table>
+	<%= submit_tag("Log In") %>
+<% end %>
+<td><a href="/users/new">Register</a></td>
+<% if flash[:wrongpassword] %>
+	<p><%= flash[:wrongpassword] %></p>
+<% end %>
+<% if flash[:noid] %>
+	<p><%= flash[:noid] %></p>
+<% end %>
+

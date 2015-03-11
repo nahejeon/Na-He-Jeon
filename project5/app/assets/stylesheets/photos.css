@@ -1,0 +1,40 @@
+p {
+	font-family: Tahoma;
+}
+
+}
+td {
+	background-color: red;
+}
+
+.commenter {
+	font-family: Tahoma;
+	font-weight: bold;
+	background-color: #E0E0E0;
+}
+
+.block {
+	background-color: #FFCCCC;
+}
+
+img {
+	max-height: 500px;
+}
+
+.creation{
+	font-size: 10px;
+}
+
+.comment{
+	font-family: Tahoma;
+}
+
+.date{
+	margin-top: 2px;
+	font-size: 10px;
+}
+
+.nametitle{
+	font-weight: bold;
+	font-size: 30px;
+}

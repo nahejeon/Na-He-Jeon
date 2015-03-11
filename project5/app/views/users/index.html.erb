@@ -1,0 +1,5 @@
+	<p class = "title">List of names</p>
+	<% for user in @users %>
+		<p class = "names"><%= link_to(user.first_name + " " + user.last_name, controller: "photos", action: "index", id: user.id) %></p>
+	<% end%>
+

@@ -1,0 +1,9 @@
+<%= image_tag (Photo.find_by_id(params[:id])).file_name().to_s %>
+<%= form_tag({controller: "comments", action: "create", id: params[:id]}, :method => "post") do %>
+	<%= label_tag(:comment, "Type a comment: ") %>
+	<%= text_field_tag(:comment) %>
+	<%= submit_tag("Submit") %>
+<% end %>
+<% if flash[:danger] %>
+	<p><%= flash[:danger] %></p>
+<% end %>

@@ -1,0 +1,4 @@
+<%= form_for(:user, :url => {controller: "photos", action: "create"}, multipart: true) do |form| %>
+	<%= form.file_field(:photo) %>
+	<%= submit_tag("Upload") %>
+<% end %>
